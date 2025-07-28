@@ -1,0 +1,13 @@
+{
+    "name": "merveyilmaz/birthday-calculation",
+    "description": "birthday calculation",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Merveyilmaz\\BirthdayCalculation\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
