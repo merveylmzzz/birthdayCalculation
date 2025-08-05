@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"BirthdayTest::test_age_is_calculated_correctly":0.003000000000000000062450045135165055398829281330108642578125,"BirthdayTest::test_days_is_calculated_correctly":0,"BirthdayTest::test_zodiac_sign":0}}
