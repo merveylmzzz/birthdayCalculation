@@ -14,5 +14,17 @@
     },
     "scripts": {
     "test": "vendor/bin/phpunit"
+    },
+    "require": {
+        "illuminate/support": "^12.21",
+        "illuminate/console": "^12.21"
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "Merveyilmaz\\BirthdayCalculation\\ZodiacServiceProvider"
+        ]
     }
+}
+
 }

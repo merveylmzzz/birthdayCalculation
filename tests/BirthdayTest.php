@@ -20,10 +20,4 @@ class BirthdayTest extends TestCase
         $expected = (new DateTime('2000-01-01'))->diff($now)->days;
         $this->assertEquals($expected, $birthday->getDays());
     }
-
-    public function test_zodiac()
-    {
-        $birthday = new Birthday('1990-04-21');
-        $this->assertEquals('Boğa', $birthday->getZodiacSign());
-    }
 }

@@ -2,7 +2,9 @@
 
 namespace Merveyilmaz\BirthdayCalculation;
 
-class Birthday
+use Merveyilmaz\BirthdayCalculation\Enums\ZodiacEnum;
+
+class Birthday 
 {
   protected $birthDate;
 
@@ -26,17 +28,8 @@ class Birthday
       return $this->birthDate->diff($today)->days;
   }
 
-  public function getZodiacSign(): string
+  public function getZodiac(): ZodiacEnum
   {
-      $day = (int)$this->birthDate->format('d');
-      $month = (int)$this->birthDate->format('m');
-
-      $zodiac = [
-          [20, 'Oğlak'], [19, 'Kova'], [20, 'Balık'], [20, 'Koç'],
-          [21, 'Boğa'], [21, 'İkizler'], [23, 'Yengeç'], [23, 'Aslan'],
-          [23, 'Başak'], [23, 'Terazi'], [22, 'Akrep'], [22, 'Yay'], [22, 'Oğlak']
-      ];
-
-    return ($day < $zodiac[$month - 1][0]) ? $zodiac[$month - 1][1] : $zodiac[$month][1];
+      return ZodiacEnum::fromDate($this->birthDate);
   }
 }
